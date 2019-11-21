@@ -24,6 +24,11 @@ export class ShoppingListService {
     this.ingredientsChanged.emit([...this.ingredients]);
   }
 
+  addIngredients(ingredients: Ingredient[]) {
+    this.ingredients.push(...ingredients);
+    this.ingredientsChanged.emit([...this.ingredients]);
+  }
+
   deleteIngredient() {
     if (this.selectedIngredient !== undefined) {
       this.ingredients.splice(this.selectedIngredient, 1);

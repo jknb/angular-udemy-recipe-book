@@ -8,7 +8,7 @@ import { Recipe } from './recipes/recipe.model';
 })
 export class AppComponent {
   title = 'recipe-book';
-  selectedHeaderItem = 'shopping-list';
+  selectedHeaderItem = 'recipes';
   @Output() recipeSelected2 = new EventEmitter<Recipe>();
 
   onHeaderItemSelection(item: string) {
